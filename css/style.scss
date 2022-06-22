@@ -1,0 +1,1023 @@
+@charset "UTF-8";
+
+$fontcolor: #1F1F1F;
+$subcolor: #F8EFE7;
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #FFF;
+  color: $fontcolor;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.4rem;
+}
+
+section{
+padding-top: 150px;
+}
+
+h2{
+  display: inline-block;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 3.5rem;
+}
+
+h3{
+  font-size: 2.4rem;
+  // font-weight: bold;
+  text-align: left;
+  margin-bottom: 3.5rem;
+}
+
+h4{
+  font-size: 1.5rem;
+  text-align: left;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px;
+}
+
+.sub {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 2rem;
+}
+
+p{
+  font-size: 1.4rem;
+  text-align: left;
+  line-height: 200%;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a{
+  text-decoration: none;
+  transition: all 1s 0s ease;
+  -webkit-transition: all 1s 0s ease;
+  -moz-transition: all 1s 0s ease;
+  -ms-transition: all 1s 0s ease;
+  -o-transition: all 1s 0s ease;
+
+  &:hover{
+    color: #fafafa;
+  }
+}
+
+// ボタン設定
+.button{
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: all 1s 0s ease;
+  -webkit-transition: all 1s 0s ease;
+  -moz-transition: all 1s 0s ease;
+  -ms-transition: all 1s 0s ease;
+  -o-transition: all 1s 0s ease;
+  width: 250px;
+}
+
+  .pink{
+    color: #FFF;
+    background-color: #FFAF82;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    
+    &:hover{
+      background-color: #fff4f4;
+      color: #FFAF82;
+    }
+  }
+
+  .gray{
+    background-color: #C4C4C4;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+
+        &:hover{
+      background-color: $fontcolor;
+      color: #C4C4C4;
+    }
+  }
+
+
+.wrap{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  
+  #about{
+    padding-top: 10vw;
+    margin-top: -20vw;
+  }
+}
+
+.wrap_page{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header{
+  background-color: #EEEEEE;
+  width: 100%;
+  height: 8rem;
+  z-index: 10;
+  position: fixed;
+}
+
+#logo {
+  width: 18rem;
+  display: block;
+}
+.toggle_btn{
+  display: none;
+}
+
+
+#nav1{
+  display:flex;
+  justify-content: space-between;
+  font-weight: regular;
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  align-items: center;
+  
+  ul{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  li{
+    margin-right: 2rem;
+    vertical-align: middle;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+#nav2{
+  display:none;
+}
+
+
+#mask {
+  display: none;
+  transition: all .5s;
+}
+
+
+#mainvisual{
+  padding-top: 3vw;
+  height: 80vw;
+  display: block;
+}
+
+main{
+  overflow-x: hidden;
+}
+
+.top_pic1{
+  text-align: right;
+  position: relative;
+  padding-top: 10vw;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  z-index: 1;
+}
+
+.pic1{
+  margin-right: calc((50vw – 100%) * -1);
+}
+
+.top_pic2{
+  position: absolute;
+  top: 35vw;
+  left: -2vw;
+  width: 60vw;
+  z-index: 1;
+}
+
+.top_pic3{
+  position: absolute;
+  top: 27vw;
+  right: 0;
+  width: 55vw;
+  z-index: 3;
+}
+
+.pic3{
+  margin-right: calc((50vw – 100%) * -1);
+}
+
+.top_copy{
+  // padding-top: 10vw;
+  position: absolute;
+  width: 16vw;
+  padding-top: 10vw;
+  left: 15vw;
+  z-index: 2;
+}
+
+.top_square{
+  position: absolute;
+  right: 9vw;
+  top: 20vw;
+  z-index: -1;
+}
+
+.square{
+  &:before{
+    content: "";
+    display: block;
+    width: 25vw;
+    height: 25vw;
+    background-color: #E9E9E9;
+  }
+}
+
+// ありひろについて
+
+.about-layout{
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+
+.about_left{
+  background-color: #F8EFE7;
+  margin-top: 13rem;
+  width: 35vw;
+}
+
+.about_text{
+padding: 4rem;
+p{
+  text-align: left;
+  margin-bottom: 3.5rem;
+}
+}
+
+.about_right{
+  width: 40vw;
+}
+
+// サービス
+
+.service_title{
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.service_square{
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.square2{
+  &:before{
+    content: "";
+    display: block;
+    width: 960px;
+    height: 250px;
+    background-color: #E9E9E9;
+  }
+}
+
+.service_content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+  width: 28%;
+
+  img{
+    margin-bottom: 20px;
+  }
+
+  h3{
+    margin-bottom: 20px;
+  }
+}
+
+// FLOW
+
+
+.flow_no{
+  font-family: 'Tapestry', cursive;
+  font-size: 6rem;
+  margin-right: 30px;
+}
+
+.flow_wrap{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  &:first-child{
+    margin-bottom: 0;
+
+  }
+}
+
+.flow_right{
+  width: 45%;
+}
+
+.flow_left{
+  width: 45%;
+  text-align: left;
+}
+
+.flow_text{
+  display: block;
+  padding-left: 1rem;
+  border-left: 1px solid ;
+}
+
+// 制作実績
+#works{
+  text-align: center;
+}
+
+.works_title{
+    text-align: left;
+  }
+
+.slick-area {
+    font-size: 0;
+    margin-bottom: 3.5rem;
+    li{
+      padding: 0 3rem;
+    }
+  }
+
+  .works_back{
+    background-color: #E9E9E9;
+    margin:0 auto;
+    padding:5rem 0;
+    overflow-x: hidden;
+  }
+
+// お問い合わせ
+
+#contact{
+  margin-bottom: 5px;
+}
+
+.contact_back{
+  background-color: #F8EFE7;
+  padding:4rem;
+
+}
+
+.contact_text {
+  p{
+    text-align: center;
+    margin-bottom:3.5rem;
+  }
+}
+
+
+footer{
+  padding: 2rem;
+  margin: 0 auto;
+  
+  p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+}
+
+// ありひろについてページ
+.about-title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1.5em;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    margin-bottom: 20px;
+}
+
+.about-title-box {
+  	margin:0 3% 3% 3%;
+}
+
+.about-icon{
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  border-spacing: 0px 20px;
+    img{
+    height: 40px;
+  }
+}
+
+
+.aboutpage_flex{
+  display: flex;
+
+  .aboutpage_left{
+    width:65%;
+  }
+  
+  .aboutpage_right{
+    width:35%;
+  }
+}
+
+.aboutpage_right_content{
+  text-align: center;
+}
+
+.aboutpage_content{
+  margin-bottom: 2.5rem;
+}
+
+.aboutpage_img{
+  width: 50%;
+  text-align:center;
+}
+
+// アコーディオン全体
+.accordion-area{
+    list-style: none;
+    margin:0 auto;
+}
+
+.accordion-area li{
+    margin: 10px 0;
+}
+
+.accordion-area section {
+	border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1.5em;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+}
+
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+	transform: rotate(45deg);
+}
+
+.title.close::after{
+	transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+	margin:0 3% 3% 3%;
+    padding: 3%;
+}
+
+// Works総合ページ
+.works_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:50px;
+}
+
+.works_grid-contents{
+  img{
+    margin-bottom: 10px;
+  }
+  p{
+    text-align:center;
+  }
+}
+
+// Works詳細ページ
+
+.workspage_left h3{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #121212;
+}
+
+.workspage_flex{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+  .workspage_left{
+    width:40%;
+    text-align: left;
+    ul{
+      line-height: 1.5;
+    }
+  }
+  
+  .workspage_right{
+    width:50%;
+  }
+  
+  .workspage_left2{
+    width:75%;
+    text-align: left;
+    img{
+      max-width: 100%;
+      border: solid 1px #121212;
+    }
+  }
+  
+  .workspage_right2{
+    width:20%;
+    img{
+      max-width: 100%;
+        border: solid 1px #121212;
+      }
+    }
+
+.workspage_right_content{
+  text-align: center;
+}
+
+.workspage_content{
+  margin-bottom: 2.5rem;
+}
+
+.workspage_button-area{
+  text-align: center;
+}
+
+.workspage_img{
+  width: 50%;
+  text-align:center;
+}
+
+
+// お問い合わせページ
+#formwrap{
+  margin-top: 10rem;
+}
+
+.form_background{
+  background-color: #F8EFE7;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact_form{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+
+  p{
+    margin-bottom: 1rem;
+  }
+}
+
+.contact_button{
+  text-align: center;
+}
+
+form input[type="text"], form textarea {
+  background-color: #FFF;
+	width:100%;
+	display:block;
+  margin-bottom: 20px;
+}
+
+
+
+// レスポンシブ設定
+
+@media screen and (max-width: 768px) {
+
+.wrap{
+  position: relative;
+  width: 80%;
+  margin-top: -20vw;
+  padding: 10vw 0;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+
+#mainvisual{
+  padding-top: 10vw;
+  height: 150vw;
+}
+
+.top_square{
+  position: absolute;
+  right: 5vw;
+  top: 20vw;
+  z-index: -1;
+}
+
+.square{
+  &:before{
+    margin-top: 30vw;
+    content: "";
+    display: block;
+    width: 50vw;
+    height: 50vw;
+    background-color: #E9E9E9;
+  }
+}
+
+.top_pic1{
+  text-align: right;
+  position: relative;
+  padding-top: 10vw;
+  width: 100%;
+  z-index: 1;
+}
+
+.pic1{
+  margin-right: 0;
+  display: bolck;
+}
+
+.top_pic2{
+  position: absolute;
+  top: 70vw;
+  left: -2vw;
+  width: 90vw;
+  z-index: 1;
+}
+
+.top_pic3{
+  position: absolute;
+  top: 100vw;
+  right: 0;
+  width: 55vw;
+  z-index: 3;
+}
+
+.top_copy{
+  // padding-top: 10vw;
+  position: absolute;
+  width: 28vw;
+  padding-top: 15vw;
+  left: 10vw;
+  z-index: 2;
+}
+
+// ハンバーガーメニュー
+.menu {
+  display: none;
+}
+
+#nav2 {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  color: #fff;
+  padding: 60px 25px;
+  background-color: #121212;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 20;
+  opacity: 0;
+}
+#nav2 a {
+  color: #fff;
+}
+.open #nav2 {
+  left: 0;
+  opacity: 1;
+}
+#nav2 ul {
+  margin: 0;
+  padding: 0;
+}
+#nav2 ul.nav-menu {
+  margin-bottom: 60px;
+  border-top: solid 1px #fff;
+}
+#nav2 ul.nav-menu li {
+  position: relative;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: solid 1px #fff;
+}
+#nav2 ul.nav-sns li {
+  padding: 5px 0;
+}
+
+
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 20;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eeeeee;
+  opacity: .8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+
+// ありひろについて
+
+.about-layout{
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vw;
+  margin-bottom: 15rem;
+}
+
+.about_left{
+  justify-content: center;
+  align-items: middle;
+  width: 100%;
+  margin-top: 0;
+  order: 2;
+}
+
+.about_text{
+  text-align: center;
+  width: 100%;
+}
+
+.about_right{
+  order: 1;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+//お手伝いできること
+
+.service_square{
+  left: 0;
+}
+
+.square2{
+  &:before{
+    content: "";
+    display: inline-block;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    height: 25rem;
+    background-color: #E9E9E9;
+  }
+}
+
+.service_content{
+  justify-content: center;
+  flex-direction:column;
+  align-items:center;
+}
+
+.content{
+  width: 100%;
+  margin-bottom: 50px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+.accordion-area li{
+  margin-bottom: 50px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+// 製作の流れ
+
+.flow_left{
+  width: 100%;
+  text-align: center;
+}
+
+.flow_right{
+  width: 100%;
+}
+
+.flow_wrap{
+  flex-direction: column;
+  justify-content: center;
+  // margin-bottom: 5rem;
+}
+
+// 制作実績
+
+#works{
+  .wrap{
+    padding: 0;
+  }
+}
+
+// Aboutページ
+.aboutpage_flex{
+  justify-content: center;
+  flex-direction:column;
+
+    .aboutpage_left{
+    width: 100%;
+  }
+  
+  .aboutpage_right{
+    width:100%;
+  }
+
+}
+
+.aboutpage_left{
+  order: 2;
+}
+.aboutpage_right{
+  order: 1;
+}
+
+.aboutpage_img{
+  width: 200px;
+}
+
+  .works_title{
+    text-align: center;
+  }
+
+  .slick-area {
+    li{
+      padding: 0 1rem;
+    }
+  }
+  
+
+  #contact{
+  .wrap{
+    padding: 0;
+  }
+}
+
+// 制作総合ページ
+.works_grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:50px;
+}
+
+
+
+// 制作実績ページ
+.workspage_flex{
+  justify-content: center;
+  flex-direction:column;
+
+    .workspage_left{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .workspage_right{
+    width:100%;
+  }
+
+    .workspage_left2{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .workspage_right2{
+    width:100%;
+  }
+
+}
+
+
+// お問い合わせページ
+#formWrap {
+	width:95%;
+	margin:0 auto;
+}
+// table.formTable th, table.formTable td {
+// 	width:auto;
+// 	display:block;
+// }
+// table.formTable th {
+// 	margin-top:5px;
+// 	border-bottom:0;
+// }
+// form input[type="text"], form textarea {
+// 	width:80%;
+// 	padding:5px;
+// 	font-size:110%;
+// 	display:block;
+// }
+// form input[type="submit"], form input[type="reset"], form input[type="button"] {
+// 	display:block;
+// 	width:100%;
+// 	height:40px;
+// }
+
+
+}

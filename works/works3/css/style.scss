@@ -1,0 +1,430 @@
+@charset "UTF-8";
+$maincolor: #FFFFFF;
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #050507;
+  text-align: center;
+  color: $maincolor;
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* コンテンツ幅を設定するための共通クラス */
+.wrapper {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+/* MainとFooter全体を囲むクラス */
+.container {
+  background: #050507;
+  color: #fff;
+  text-align: center;
+}
+
+h1{
+  font-size: 10rem;
+  color: $maincolor;
+  text-align: 125px;
+  margin-bottom: 100px;
+}
+
+h2{
+  display: inline-block;
+  font-size: 6rem;
+  color: $maincolor;
+  border-bottom: $maincolor solid 1px;
+  margin-bottom: 45px;
+}
+
+h3{
+  font-size: 4rem;
+  font-weight: 700;
+  color: $maincolor;
+  margin-bottom: 20px;
+}
+
+h4{
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+
+#navi{
+  width: 100%;
+  background-color: #fff;
+  color: #050507;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: 0.6s;
+  z-index:30;
+
+  ul{
+    width: 100%;
+    background-color: #050507;
+    padding: 80px 0 30px 0;
+  }
+  li{
+    list-style: none;
+    padding: 10px 0;
+
+    a{
+      display: block;
+    }
+  }
+  .active{
+    transform: translateY(0%);
+  }
+}
+
+#mainvisual{
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+
+  img{
+    width: calc(100%/3);
+    height: 100vh;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+}
+
+
+#info{
+  margin-bottom: 140px;
+  dl{
+    margin-bottom: 20px;
+  }
+  dd{
+    font-size: 1.8rem;
+  }
+}
+
+
+#side-btn{
+  border: solid #FFF 1px;
+  position: fixed;
+  transition: 0.6s;
+  right: -144px;
+  bottom: 200px;
+  transform: rotate(-90deg) translateY(60px);
+  z-index: 30;
+
+  a{
+    width: 165px;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    padding: 15px 0;
+    transition:0.3s;
+
+    &:last-of-type{
+      border-left: solid 1px #fff;
+    }
+
+    &:hover{
+      opacity:0.7;
+    }
+  }
+}
+  
+.logo{
+  line-height: 1px;
+  position: fixed;
+  top: 35px;
+  left: 30px;
+  z-index: 40;
+  display: none;
+
+  a{
+    display: block;
+  }
+}
+
+.hamburger{
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 40;
+  display: none;
+
+  span{
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: 6px;
+    transition: 0.5s ease-in-out;
+
+    &:nth-child(1){
+      top: 11px;
+    }
+    &:nth-child(2){
+      top:21px;
+    }
+    &:nth-child(3){
+      top:31px;
+    }
+    .active {
+      span{
+        &:nth-child(1){
+          top:21px;
+          left: 6px;
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2),
+        &:nth-child(3){
+          top: 21px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+  
+  .gallery-img{
+  li{
+    margin-bottom: 60px;
+&:last-child{
+  margin-bottom: 0;
+}
+    img{
+      width: 48%;
+    }
+    &:nth-child(odd){
+      text-align: left;
+    }
+    &:nth-child(even){
+      text-align: right;
+    }
+  }
+}
+
+#access{
+  padding:480px 0;
+  // background: #535151 0.5;
+  // background-image: url(../img/bg.jpg) ;
+  background-size:cover no-repeat;
+  position: relative;
+  z-index: 20;
+
+  p{
+    &:first-child{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.bg{
+  background: url("../img/bg.jpg") center center repeat !important;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 10;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translate(0,50%);
+  transition: 2s;
+
+}
+
+.fadein.show{
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+
+.access_text{
+  margin-bottom: 30px;
+}
+
+.btn_map{
+  padding: 15px 82px;
+  border: solid #FFFFFF 1px;
+  transition: 1s ease;
+  &:hover{
+    background-color: #050507;
+  }
+}
+#contact{
+  margin-bottom: 200px;
+}
+.btn_contact{
+  border: solid #FFFFFF 1px;
+  width: 400px;
+  padding: 30px 0;
+  display: block;
+  margin: 0 auto 20px auto;
+  transition: 0.3s;
+  position: relative;
+
+  &::before,
+  &::after{
+    content:"";
+    position: absolute;
+    right: -40px;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+
+  &::before{
+    width: 120px;
+    top: 39px;
+  }
+
+    &::after{
+      width: 15px;
+      top:35px;
+      transform: rotate(25deg);
+    }
+
+    &:hover{
+      opacity: 0.7;
+
+      &::before,
+      &::after{
+        right: -50px;
+      }
+
+    }
+
+
+}
+
+#footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 30px;
+  text-align: left;
+  font-size: 1.2rem;
+  border-top: solid 1px #fff;
+  align-items: flex-end;
+
+  p{
+    line-height: 1.6;
+  }
+}
+
+.sns{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
+  li{
+    margin-right: 15px;
+  }
+}
+
+.copyright{
+  display: flex;
+  align-items: center;
+
+  li{
+    &:last-child{
+      margin-left: 30px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px){
+  
+h1{
+  font-size: 4.8rem;
+}
+
+h2{
+  font-size: 3.2rem;
+}
+/*-------------------------------------------
+  Information
+  -------------------------------------------*/
+  #information {
+    margin-bottom: 80px;
+  }
+  #information .info-date-en,
+  #information .info-time-en,
+  #information .info-date-ja {
+    font-size: 1rem;
+  }
+  #information .info-place {
+    font-size: 2rem;
+  }
+
+  /*-------------------------------------------
+  Gallery
+  -------------------------------------------*/
+  #gallery {
+    margin-bottom: 280px;
+  }
+
+.gallery-img{
+      li{
+        margin-bottom: 30px;
+        img {
+          width: 100%;
+         }
+      }
+}
+
+  /*-------------------------------------------
+  Access
+  -------------------------------------------*/
+  #access {
+    margin-bottom: 280px;
+  }
+
+  /*-------------------------------------------
+  Contact
+  -------------------------------------------*/
+  /*
+  スマホの時は矢印を消す
+  */
+  .btn_contact {
+    width: 100%;
+    &::before
+    {
+      content: none;
+    }
+    &::after {
+      content: none;
+    }
+  }
+
+  /*-------------------------------------------
+  Footer
+  -------------------------------------------*/
+  #footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 30px;
+    .sns {
+       margin-bottom: 30px;
+     }
+  }
+
+
+}
